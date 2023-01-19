@@ -1,9 +1,4 @@
-#For cGCMC dont use uw, vw weights
-#Foe ECGCMC use uw , vw weights:
-    # There are many ways to initialize these weights
-    #1- Make it fix and try to learn with embeddings as in this code
-    #2- or use with
-    # tf.GradientTape(persistent=True) as tape:uw = tf.Variable(1.)
+
 
 from __future__ import print_function
 
