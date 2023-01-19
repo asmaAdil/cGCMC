@@ -454,7 +454,7 @@ class RecommenderContextSideInfoGAE(Model):
 
         print("**********************evaluations**********************")
         self._rmse()
-        print("Ya Allah help in Getting MAE")
+
         self._mae()
 
     def _loss(self):
@@ -671,7 +671,7 @@ class RecommenderBothSideInfoGAE(Model):
 
         print("**********************evaluations**********************")
         self._rmse()
-        print("Ya Allah help in Getting MAE")
+
         self._mae()
 
 
