@@ -682,6 +682,18 @@ class RecommenderBothSideInfoGAE(Model):
 
         self.num_context_features = num_context_features
         self.edge_hidden_dim= edge_hidden_dim
+        
+        self.wfu = self.add_weight(shape=(160, 1), initializer="normal") # 160  is feat hidden dimensions, change according to that, self.feathiddendim
+        self.wfv = self.add_weight(shape=(160, 1), initializer="normal") #feat hidden dimensions, change according to that
+        self.wuo = self.add_weight(shape=(75, 1), initializer="normal") # opinion hidden dimensions, change according to that, mlp_hidden[0] dim 
+        self.wvo = self.add_weight(shape=(75, 1), initializer="normal")# opinion hidden dimensions, change according to that.mlp_hidden[1] dim
+        self.wuc = self.add_weight(shape=(10, 1), initializer="normal")# context hidden dimensions, change accordingly
+        self.wvc = self.add_weight(shape=(10, 1), initializer="normal")# context hidden dimensions, change accordingly 
+        #another way we used to initialze weights is tf.GradientTape(persistent=True) as tape:uw = tf.Variable(1.)
+        self.bfu = self.add_weight(shape=(2, 1), initializer="zeros")
+        self.bfv = self.add_weight(shape=(2, 1), initializer="zeros")
+        self.buc = self.add_weight(shape=(2, 1), initializer="zeros")
+        self.vc= self.add_weight(shape=(2, 1), initializer="zeros")
 
         if num_side_features > 0:
             self.u_features_side = placeholders['u_features_side']
