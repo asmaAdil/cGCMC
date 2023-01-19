@@ -1,4 +1,5 @@
 #For cGCMC dont use weights in encoder last step
+#Here we provide general strategy foe extended cGCMC. One can use these ways or any other way to initilze and learn weights for final embeddings of encoder
 #Foe ECGCMC use weights:
     # There are many other ways to initialize these weights
     # Make it fix and try to learn with embeddings as in this code
