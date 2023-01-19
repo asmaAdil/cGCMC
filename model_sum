@@ -133,7 +133,7 @@ class RecommenderGAE(Model):
 
         print("**********************evaluations**********************")
         self._rmse()
-        print("Ya Allah help in Getting MAE")
+     
         self._mae()
 
     def _loss(self):
@@ -261,7 +261,7 @@ class RecommenderSideInfoGAE(Model):
         self.embeddings = self.activations[0]
 
         self._rmse()
-        print("Ya Allah help in Getting MAE")
+   
         self._mae()
 
     def _loss(self):
@@ -694,7 +694,7 @@ class RecommenderBothSideInfoGAE(Model):
 
         print("**********************evaluations**********************")
         self._rmse()
-        print("Ya Allah help in Getting MAE")
+
         self._mae()
 
 
@@ -963,7 +963,7 @@ class RecommenderContextConInfoGAE(Model):
         self.embeddings = self.activations[0]
 
         self._rmse()
-        print("Ya Allah help in Getting MAE")
+
         self._mae()
 
         print("*******************RecommenderContextConInfoGAE***********************")
@@ -1229,7 +1229,7 @@ class RecommenderBothSideConInfoGAE(Model):
         self.embeddings = self.activations[0]
 
         self._rmse()
-        print("Ya Allah help in Getting MAE")
+
         self._mae()
 
     def _loss(self):
